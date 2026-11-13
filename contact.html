@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · S M Imran Hassan</title>
+<meta name="description" content="Contact S M Imran Hassan for weddings, portraits and photography projects in Australia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Hanken+Grotesk:wght@400;500&display=swap">
+<style>
+/* Contact page: same quiet white identity as the homepage. A photograph and the personal note on one side, the enquiry form on the other. */
+:root{
+  --bg:#ffffff;
+  --fg:#111111;
+  --text:#2b2b2b;
+  --muted:#6e6e6e;
+  --line:#e2e2e2;
+  --soft:#f4f4f4;
+  --serif:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
+  --sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.gut{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1200px;margin:0 auto}
+
+/* header */
+.head{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.97);box-shadow:0 1px 0 var(--line)}
+.head .in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 24px;padding-block:16px}
+.name{font-family:var(--serif);font-weight:500;font-size:clamp(20px,2vw,26px);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;line-height:1.1}
+.head nav ul{display:flex;flex-wrap:wrap;gap:4px 22px;list-style:none;margin:0;padding:0}
+.head nav a{font-size:14px;text-decoration:none;padding:6px 0;display:inline-block;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s var(--ease)}
+.head nav a:hover,.head nav a[aria-current="page"]{background-size:100% 1px}
+
+/* title */
+.title{text-align:center;padding-block:clamp(48px,7vw,88px) clamp(28px,4vw,48px);display:grid;justify-items:center;gap:12px}
+.title h1{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.4vw,56px);letter-spacing:.06em;text-transform:uppercase;line-height:1.05}
+.title p{margin:0;max-width:min(52ch,100%);color:var(--muted)}
+
+/* two columns */
+.cols{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:start;padding-bottom:clamp(64px,8vw,110px)}
+@media (max-width:860px){.cols{grid-template-columns:1fr}}
+.side{display:grid;gap:26px;min-width:0}
+.side figure{margin:0;overflow:hidden;background:var(--soft)}
+.side figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.note{font-family:var(--serif);font-weight:500;font-size:clamp(20px,1.8vw,24px);line-height:1.45;margin:0}
+.details{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.details li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:4px 16px;padding-block:14px;border-bottom:1px solid var(--line);font-size:15px}
+.details .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+.details a{text-decoration:none;word-break:break-word;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s var(--ease)}
+.details a:hover{background-size:100% 1px}
+@media (max-width:420px){.details li{grid-template-columns:1fr}}
+
+/* form */
+form{display:grid;gap:22px;min-width:0}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
+.f{display:grid;gap:8px;min-width:0}
+label,.legend{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+label .opt{text-transform:none;letter-spacing:0}
+input,select,textarea{width:100%;min-height:48px;padding:10px 0;border:0;border-bottom:1px solid #cfcfcf;border-radius:0;background:transparent;font-size:16px;transition:border-color .25s}
+textarea{min-height:150px;resize:vertical;line-height:1.6}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--fg)}
+input[aria-invalid="true"],textarea[aria-invalid="true"]{border-bottom-color:#a3201b}
+.err{font-size:13px;color:#a3201b;min-height:0}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:12px;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative;cursor:pointer;letter-spacing:0;text-transform:none;font-size:14px;color:var(--fg)}
+.chips input{position:absolute;opacity:0;width:1px;height:1px;min-height:0}
+.chips span{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border:1px solid var(--line);border-radius:999px;transition:background .2s,color .2s,border-color .2s}
+.chips label:hover span{border-color:var(--fg)}
+.chips input:checked+span{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chips input:focus-visible+span{outline:2px solid var(--fg);outline-offset:3px}
+.send{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 32px;border-radius:999px;border:1px solid var(--fg);background:var(--fg);color:var(--bg);cursor:pointer;font-size:14px;letter-spacing:.04em;transition:background .25s,color .25s}
+.btn:hover{background:var(--bg);color:var(--fg)}
+.btn.ghost{background:var(--bg);color:var(--fg)}
+.btn.ghost:hover{background:var(--fg);color:var(--bg)}
+.small{font-size:13px;color:var(--muted)}
+.done{border:1px solid var(--line);padding:22px;display:grid;gap:12px}
+.done h2{margin:0;font-family:var(--serif);font-weight:500;font-size:24px}
+.done p{margin:0;color:var(--text)}
+.done pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--sans);font-size:14px;background:var(--soft);padding:14px;max-height:240px;overflow:auto}
+
+footer{border-top:1px solid var(--line);text-align:center;padding-block:28px 36px;font-size:12px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="in gut">
+    <a class="name" href="index.html">S M Imran Hassan.</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="gut">
+  <div class="wrap">
+    <div class="title">
+      <h1>Contact</h1>
+      <p>Weddings, portraits, commissions and photography projects. Tell me a little about what you have in mind.</p>
+    </div>
+
+    <div class="cols">
+      <aside class="side">
+        <figure><img src="images/contact.jpg" alt="The photographer reflected in a car side mirror with his camera, above a mountain town in Ladakh under a cloudy sky"></figure>
+        <p class="note">Every story begins with a conversation. Whether it is your wedding day, a portrait or a project you would like to bring to life, I would be glad to hear from you.</p>
+        <ul class="details">
+          <li><span class="k">Email</span><a href="mailto:Photographybyimran@gmail.com">Photographybyimran@gmail.com</a></li>
+          <li><span class="k">Based in</span><span>Australia &amp; Bangladesh</span></li>
+          <li><span class="k">Weddings</span><a href="https://www.purplebirdphoto.com.au/" target="_blank" rel="noopener">Purple Bird Australia</a></li>
+          <li><span class="k">Instagram</span><a href="https://www.instagram.com/purplebirdphoto.au/" target="_blank" rel="noopener">@purplebirdphoto.au</a></li>
+          <li><span class="k">Street work</span><a href="https://www.flickr.com/photos/blackbd/" target="_blank" rel="noopener">flickr.com/photos/blackbd</a></li>
+        </ul>
+      </aside>
+
+      <section aria-label="Enquiry form">
+        <form id="f" novalidate>
+          <fieldset>
+            <span class="legend" id="tlabel">What is it for?</span>
+            <div class="chips" role="radiogroup" aria-labelledby="tlabel">
+              <label><input type="radio" name="type" id="t-wed" value="Wedding" checked><span>Wedding</span></label>
+              <label><input type="radio" name="type" id="t-por" value="Portrait"><span>Portrait</span></label>
+              <label><input type="radio" name="type" id="t-pro" value="Project / commission"><span>Project</span></label>
+              <label><input type="radio" name="type" id="t-pri" value="Prints"><span>Prints</span></label>
+              <label><input type="radio" name="type" id="t-oth" value="Something else"><span>Other</span></label>
+            </div>
+          </fieldset>
+
+          <div class="two">
+            <div class="f"><label for="nm">Your name</label><input id="nm" name="name" autocomplete="name" required><span class="err" id="nm-e"></span></div>
+            <div class="f"><label for="em">Email</label><input id="em" name="email" type="email" autocomplete="email" required><span class="err" id="em-e"></span></div>
+          </div>
+          <div class="two">
+            <div class="f"><label for="ph">Phone <span class="opt">(optional)</span></label><input id="ph" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="f"><label for="dt">Date <span class="opt">(if you have one)</span></label><input id="dt" name="date" type="date"></div>
+          </div>
+          <div class="f"><label for="lc">Location <span class="opt">(city or venue)</span></label><input id="lc" name="location" placeholder="e.g. Sydney, Wollongong, Adelaide"></div>
+          <div class="f"><label for="ms">Your message</label><textarea id="ms" name="message" required placeholder="Tell me about your day or your idea"></textarea><span class="err" id="ms-e"></span></div>
+
+          <div class="send">
+            <button class="btn" type="submit">Send enquiry</button>
+            <span class="small">Opens your email app with your message ready to send.</span>
+          </div>
+        </form>
+
+        <div class="done" id="done" hidden tabindex="-1">
+          <h2>Your message is ready</h2>
+          <p>Your email app should have opened with everything filled in. Press send there to reach me. If it didn’t open, copy your message below and email it to <strong>Photographybyimran@gmail.com</strong>.</p>
+          <pre id="out"></pre>
+          <div class="send">
+            <button class="btn" type="button" id="copy">Copy message</button>
+            <button class="btn ghost" type="button" id="edit">Edit message</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>© S M Imran Hassan</footer>
+
+<script>
+(function(){
+  var TO='Photographybyimran@gmail.com';
+  var $=function(i){return document.getElementById(i)},f=$('f'),done=document.getElementById('done'),out=document.getElementById('out');
+  function err(id,msg){var i=document.getElementById(id),e=document.getElementById(id+'-e');i.setAttribute('aria-invalid',msg?'true':'false');e.textContent=msg||'';return !msg}
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var nm=$('nm').value.trim(),em=$('em').value.trim(),ms=$('ms').value.trim();
+    var ok=err('nm',nm?'':'Please add your name.');
+    ok=err('em',/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)?'':'Please add a valid email address.')&&ok;
+    ok=err('ms',ms?'':'Please write a short message.')&&ok;
+    if(!ok){var bad=f.querySelector('[aria-invalid="true"]');if(bad)bad.focus();return}
+    var type=(f.querySelector('input[name="type"]:checked')||{}).value||'Enquiry';
+    var lines=['Enquiry: '+type,'Name: '+nm,'Email: '+em];
+    if($('ph').value.trim())lines.push('Phone: '+$('ph').value.trim());
+    if($('dt').value)lines.push('Date: '+$('dt').value);
+    if($('lc').value.trim())lines.push('Location: '+$('lc').value.trim());
+    lines.push('','Message:',ms);
+    var body=lines.join('\n'),subject=type+' enquiry from '+nm;
+    out.textContent='To: '+TO+'\nSubject: '+subject+'\n\n'+body;
+    var a=document.createElement('a');a.href='mailto:'+TO+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    document.body.appendChild(a);a.click();a.remove();
+    f.hidden=true;done.hidden=false;done.focus();
+  });
+  document.getElementById('edit').addEventListener('click',function(){done.hidden=true;f.hidden=false;$('nm').focus()});
+  var cp=document.getElementById('copy');
+  cp.addEventListener('click',function(){
+    function sel(){var r=document.createRange();r.selectNodeContents(out);var s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='Selected, press Ctrl/Cmd+C'}
+    try{navigator.clipboard.writeText(out.textContent).then(function(){cp.textContent='Copied';setTimeout(function(){cp.textContent='Copy message'},1800)},sel)}catch(e){sel()}
+  });
+})();
+</script>
+</body>
+</html>
