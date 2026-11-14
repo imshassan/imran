@@ -5,10 +5,23 @@
 <meta charset="utf-8">
 <title>About · S M Imran Hassan</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="S M Imran Hassan — wedding, lifestyle and street photographer. Founder of Purple Bird Photography, Sydney &amp; Adelaide.">
+<meta name="description" content="Bangladeshi wedding, lifestyle and street photographer in Australia. Founder of Purple Bird Photography, with more than 15 years of telling stories through light.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S M Imran Hassan">
+<meta property="og:title" content="S M Imran Hassan | Photographer">
+<meta property="og:description" content="Bangladeshi wedding, lifestyle and street photographer in Australia. Founder of Purple Bird Photography, with more than 15 years of telling stories through light.">
+<meta property="og:image" content="images/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="S M Imran Hassan with his camera, leaning on a tree in autumn colours">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="S M Imran Hassan | Photographer">
+<meta name="twitter:description" content="Bangladeshi wedding, lifestyle and street photographer in Australia. Founder of Purple Bird Photography, with more than 15 years of telling stories through light.">
+<meta name="twitter:image" content="images/share.jpg">
+<link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Hanken+Grotesk:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&family=Playfair+Display:wght@700&display=swap">
 <style>
 /* Layout: the quiet photographer's homepage. One full-screen photograph with the four doors (Faces, Places, Street, Weddings) set over it in serif capitals, a short statement, a tight masonry wall of pictures, then Stay Connected. Black and white type; the photographs carry all the colour. Single light look by choice. */
 :root{
@@ -39,11 +52,16 @@ button{font:inherit;color:inherit}
 .head .in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 24px;padding-block:30px;transition:padding .55s var(--ease)}
 .head.small .in{padding-block:14px}
 .name{font-family:var(--serif);font-weight:500;font-size:clamp(20px,2vw,26px);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;line-height:1.1}
-.head .name{font-size:clamp(30px,4.6vw,64px);letter-spacing:.05em;transition:font-size .55s var(--ease),letter-spacing .55s var(--ease);animation:namein 1.2s var(--ease) both}
+.head .name{font-size:clamp(30px,4.6vw,64px);letter-spacing:.05em;transition:font-size .55s var(--ease),letter-spacing .55s var(--ease)}
 .head.small .name{font-size:clamp(20px,2vw,26px);letter-spacing:.04em}
 @keyframes namein{from{opacity:0;letter-spacing:.18em}to{opacity:1}}
+/* name glow: a soft light behind the letters that breathes slowly */
+.head .name{text-shadow:0 0 10px rgba(255,255,255,.55),0 0 26px rgba(255,236,200,.45),0 0 54px rgba(255,214,150,.30);animation:namein 1.2s var(--ease) both,glow 4.5s ease-in-out 1.2s infinite}
+@keyframes glow{0%,100%{text-shadow:0 0 8px rgba(255,255,255,.45),0 0 22px rgba(255,236,200,.35),0 0 46px rgba(255,214,150,.22)}50%{text-shadow:0 0 14px rgba(255,255,255,.8),0 0 34px rgba(255,236,200,.6),0 0 70px rgba(255,214,150,.42)}}
+.head.solid .name{animation:namein 1.2s var(--ease) both,glowdark 4.5s ease-in-out 1.2s infinite}
+@keyframes glowdark{0%,100%{text-shadow:0 0 8px rgba(196,150,70,.28),0 0 22px rgba(196,150,70,.16)}50%{text-shadow:0 0 12px rgba(196,150,70,.5),0 0 30px rgba(196,150,70,.3)}}
 .head nav ul{display:flex;flex-wrap:wrap;gap:4px 22px;list-style:none;margin:0;padding:0}
-.head nav a{font-size:14px;text-decoration:none;opacity:.92;padding:6px 0;display:inline-block;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s var(--ease),opacity .2s}
+.head nav a{font-size:14px;font-weight:600;letter-spacing:.02em;text-decoration:none;opacity:.92;padding:6px 0;display:inline-block;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s var(--ease),opacity .2s}
 .head nav a:hover{opacity:1;background-size:100% 1px}
 
 /* hero */
@@ -58,11 +76,11 @@ button{font:inherit;color:inherit}
 @keyframes breathe{from{transform:scale(1.08)}to{transform:scale(1)}}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 78% 72% at 50% 46%,rgba(0,0,0,0) 38%,rgba(0,0,0,.38) 72%,rgba(0,0,0,.78) 100%),linear-gradient(180deg,rgba(0,0,0,.32) 0%,rgba(0,0,0,.08) 22%,rgba(0,0,0,.08) 60%,rgba(0,0,0,.42) 100%)}
 .doors{position:absolute;inset:0;z-index:2;display:flex;flex-wrap:wrap;align-content:flex-end;justify-content:center;gap:4px clamp(18px,3vw,44px);padding:24px max(20px,env(safe-area-inset-left,0px)) clamp(110px,24vh,240px)}
-.doors a,.doors button{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3vw,44px);letter-spacing:.08em;line-height:1.1;text-transform:uppercase;color:var(--on-photo);text-decoration:none;background:none;border:0;padding:0;cursor:pointer;opacity:0;transform:translateY(16px);animation:door 1.1s var(--ease) forwards;position:relative;text-shadow:0 1px 24px rgba(0,0,0,.25)}
+.doors .dw{cursor:default;font-family:var(--serif);font-weight:500;font-size:clamp(24px,3vw,44px);letter-spacing:.08em;line-height:1.1;text-transform:uppercase;color:var(--on-photo);text-decoration:none;background:none;border:0;padding:0;cursor:pointer;opacity:0;transform:translateY(16px);animation:door 1.1s var(--ease) forwards;position:relative;text-shadow:0 1px 24px rgba(0,0,0,.25)}
 .doors>*:nth-child(1){animation-delay:.3s}.doors>*:nth-child(2){animation-delay:.42s}.doors>*:nth-child(3){animation-delay:.54s}.doors>*:nth-child(4){animation-delay:.66s}
 @keyframes door{to{opacity:1;transform:none}}
-.doors a::after,.doors button::after{content:"";position:absolute;left:4%;right:4%;bottom:.04em;height:1px;background:currentColor;transform:scaleX(0);transition:transform .45s var(--ease)}
-.doors a:hover::after,.doors button:hover::after{transform:scaleX(1)}
+.doors .dw::after{content:"";position:absolute;left:4%;right:4%;bottom:.04em;height:1px;background:currentColor;transform:scaleX(0);transition:transform .45s var(--ease)}
+.doors .dw.cur::after{transform:scaleX(1)}
 .hint{position:absolute;z-index:2;left:50%;bottom:calc(26px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:1px;height:44px;background:rgba(255,255,255,.35);overflow:hidden}
 .hint::after{content:"";position:absolute;left:0;top:0;width:1px;height:100%;background:#fff;animation:drop 2.2s 1.4s ease-in-out infinite;transform:translateY(-100%)}
 @keyframes drop{to{transform:translateY(100%)}}
@@ -90,11 +108,48 @@ button{font:inherit;color:inherit}
 .more{display:flex;justify-content:center;padding-bottom:clamp(64px,8vw,110px);margin-top:calc(-1 * clamp(30px,4vw,60px))}
 .ptitle{padding-top:clamp(150px,15vw,210px)!important}
 .apage{padding-top:clamp(140px,14vw,200px)!important}
+.awpage{padding-top:clamp(140px,14vw,200px)!important;display:grid;justify-items:center;padding-bottom:clamp(64px,8vw,110px)}
+.awpics{width:100%;max-width:1120px;margin-top:clamp(56px,7vw,100px);padding-top:clamp(40px,5vw,64px);border-top:1px solid var(--line);display:grid;gap:clamp(28px,3.6vw,48px)}
+.awp-head{display:grid;justify-items:center;text-align:center;gap:10px}
+.awp-eye{margin:0;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.awpics h3{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(30px,3.4vw,44px);letter-spacing:.06em;text-transform:uppercase;line-height:1.05}
+.awp-sub{margin:0;max-width:min(54ch,100%);color:#555;font-size:15px}
+.awgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(36px,4.4vw,60px) clamp(20px,2.8vw,40px)}
+.awgrid figure{margin:0;display:grid;gap:18px;align-content:start}
+.awimg{overflow:hidden;background:var(--soft);aspect-ratio:3/2;box-shadow:0 1px 2px rgba(0,0,0,.06),0 14px 34px -18px rgba(0,0,0,.35)}
+.awimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.1s var(--ease)}
+.awgrid figure:hover .awimg img{transform:scale(1.035)}
+.awgrid figcaption{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px;align-items:baseline}
+.awgrid .no{grid-row:1/3;font-family:var(--serif);font-size:clamp(30px,2.8vw,38px);line-height:.9;color:#b9b2a6;font-weight:500;padding-right:16px;border-right:1px solid var(--line);align-self:stretch}
+.awgrid figcaption b{font-family:var(--serif);font-weight:600;font-size:clamp(20px,1.8vw,24px);line-height:1.2;color:var(--fg)}
+.awgrid .dt{color:var(--muted);font-size:14px;line-height:1.5}
+@media (max-width:640px){.awgrid{grid-template-columns:1fr}}
+.awpage .awards{margin-top:0}
+.awpage .awards h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.4vw,56px);letter-spacing:.06em;text-transform:uppercase;text-align:center;line-height:1.05}
 .ptitle h1{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.4vw,56px);letter-spacing:.06em;text-transform:uppercase;line-height:1.05}
 .sec{display:flex;flex-direction:column;gap:12px;background:var(--tint);padding:clamp(24px,3.4vw,52px) clamp(14px,2.6vw,40px) clamp(28px,3.6vw,56px)}
 .sec .wall-head{padding-top:0!important}
 .wall{gap:clamp(18px,2.4vw,32px)!important}
+.life{background:radial-gradient(120% 90% at 30% 40%,#f7f3ec 0%,#ece5da 60%,#e3dbce 100%);padding-block:clamp(64px,8vw,120px)}
+.life-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:center}
+.life-pic{margin:0;justify-self:end;width:100%;max-width:460px;box-shadow:0 2px 4px rgba(40,30,20,.08),0 30px 60px -24px rgba(40,30,20,.45),0 60px 120px -60px rgba(40,30,20,.35)}
+.life-pic img{width:100%;height:auto;display:block}
+.life-txt{display:grid;gap:16px;max-width:44ch}
+.life-eye{margin:0;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7a6f60}
+.life-txt h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(32px,3.8vw,52px);letter-spacing:.04em;text-transform:uppercase;line-height:1.05;color:#1a1612}
+.life-q{margin:6px 0 0;padding-left:22px;border-left:2px solid #b9ab95;display:grid;gap:12px}
+.life-q p{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(22px,2.1vw,30px);line-height:1.35;color:#2c261f}
+.life-q cite{font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#7a6f60}
+@media (max-width:760px){.life-q{padding-left:0;border-left:0;padding-top:16px;border-top:2px solid #b9ab95}}
+@media (max-width:760px){.life-in{grid-template-columns:1fr;justify-items:center;text-align:center}.life-pic{justify-self:center;max-width:380px}.life-txt{justify-items:center}}
 .s-bd{--tint:#f6f1e9}
+.intro{gap:0!important}
+.intro p{margin:0}
+.intro .who{max-width:none!important;white-space:nowrap;font-family:"Playfair Display",Georgia,serif!important;font-style:normal;font-weight:700;font-size:clamp(22px,2.3vw,32px)!important;letter-spacing:0;line-height:1.3;color:#111;margin-bottom:clamp(12px,1.4vw,18px)}
+@media (max-width:760px){.intro .who{white-space:normal;max-width:min(36ch,100%)!important}}
+.intro .banner{width:100%;max-width:1280px;margin:clamp(14px,2.4vw,32px) 0}
+.banner{margin:0;background:#000;overflow:hidden}
+.banner img{width:100%;height:auto;display:block}
 .s-in{--tint:#edf2f5}
 .s-wd{--tint:#f7eeee}
 .seemore{display:flex;justify-content:center;padding-top:clamp(10px,1.6vw,18px)}
@@ -129,6 +184,26 @@ button{font:inherit;color:inherit}
 .about .txt{max-width:min(78ch,100%);display:grid;gap:18px;text-align:left}
 .about h2,.connect h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,2.8vw,38px);letter-spacing:.04em;text-transform:uppercase;line-height:1.1;margin:0;text-align:center}
 .about .txt p{margin:0;color:#2b2b2b;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+.apics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);margin-top:clamp(10px,2vw,24px)}
+.apics figure{margin:0;overflow:hidden;background:var(--soft)}
+.about .apics figure{max-width:none}
+.about .apics img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+@media (max-width:600px){.apics{grid-template-columns:1fr}}
+.press{width:100%;max-width:1180px;margin-inline:auto;box-sizing:border-box;display:grid;gap:14px;justify-items:center;margin-top:clamp(20px,3vw,40px);padding-top:clamp(28px,3.4vw,44px);border-top:1px solid var(--line)}
+.press h3{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.3vw,32px);letter-spacing:.04em;text-transform:uppercase;line-height:1.15;text-align:center}
+.press-sub{margin:0 0 10px;color:var(--muted);text-align:center;font-size:15px}
+.press-row{display:flex;gap:clamp(10px,1.4vw,18px);width:100%;align-items:flex-start}
+.press-row figure{margin:0;flex:var(--r) 1 0;min-width:0;display:grid;gap:8px}
+.press-row a{display:block;background:var(--soft);box-shadow:0 1px 0 var(--line),0 10px 26px rgba(0,0,0,.08);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.press-row a:hover{transform:translateY(-4px);box-shadow:0 1px 0 var(--line),0 16px 34px rgba(0,0,0,.14)}
+.press-row figure{max-width:none;overflow:visible;background:none;width:auto}
+.press-row img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;display:block}
+.press-row figcaption{display:grid;gap:2px;font-size:13px;line-height:1.4;text-align:left}
+.press-row figcaption b{font-weight:500;color:var(--fg)}
+.press-row figcaption span{color:var(--muted)}
+@media (max-width:760px){.press-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.press-row figure:first-child{grid-column:1/-1}}
+.about .txt h3{margin:clamp(14px,2vw,26px) 0 0;padding-top:clamp(22px,3vw,34px);border-top:1px solid var(--line);font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.3vw,32px);letter-spacing:.04em;text-transform:uppercase;line-height:1.15;text-align:center}
+.about .txt a{text-underline-offset:3px}
 .about .txt p.lead{font-family:var(--serif);font-weight:500;font-size:clamp(21px,1.9vw,25px);line-height:1.4;color:var(--fg);text-align:center}
 
 
@@ -173,17 +248,19 @@ button{font:inherit;color:inherit}
 .r.on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.doors>*{opacity:1;transform:none}.r{opacity:1;transform:none}}
 </style>
+
 </head>
 <body>
-
 <header class="head" id="head">
   <div class="in gut">
     <a class="name" href="index.html">S M Imran Hassan.</a>
     <nav aria-label="Main">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="about.html" aria-current="page">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="publications.html">Publications</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -198,36 +275,22 @@ button{font:inherit;color:inherit}
   <div class="txt">
     <p class="lead">I am S M Imran Hassan, and for more than fifteen years I have tried to tell the truth of a moment through the quiet language of light.</p>
     <p>I come from Khulna, Bangladesh. As a child, while others reached for toys, I was enchanted by the camera itself, by the quiet mechanism that could catch a moment and keep it. That fascination became my most faithful companion. When I finished college, my older brother gave me my first camera, a Fujifilm 5600s, and with it the streets became my classroom. I wandered them for hours, drawn to faces, rituals and the small, unguarded gestures that make up ordinary life.</p>
-    <p>What began as a hobby slowly became a calling. I studied the craft, gathered everything I could learn, and resolved to reach the very top of it. Convincing my family that photography could be a career took time, but I never stopped making pictures. My first recognition came when one of my photographs was selected for the International Inter University Photography Exhibition (IIUPE), shown alongside work from 23 countries. Soon after, I won second prize in the Click and Caption Photo Contest organised by Save the Children UK. That moment changed everything. I upgraded my equipment with the prize money, and my family, who had watched with quiet concern, came forward to support me with all their heart.</p>
+    <p>What began as a hobby slowly became a calling. I studied the craft, gathered everything I could learn, and resolved to reach the very top of it. Convincing my family that photography could be a career took time, but I never stopped making pictures. My first recognition came when one of my photographs was selected for the International Inter University Photography Exhibition (IIUPE), organised by the North South University Photography Club (NSUPC), shown alongside work from 23 countries. Soon after, I won second prize in the Click and Caption Photo Contest organised by Save the Children UK. That moment changed everything. I upgraded my equipment with the prize money, and my family, who had watched with quiet concern, came forward to support me with all their heart.</p>
     <p>Wedding photography was still a new idea in Khulna when I decided to make it my profession. I prepared carefully, invested in the right equipment, and in the early days photographed weddings and ceremonies without pay simply to sharpen my eye. As people began to see and share the work online, the assignments followed, and I have never had to look back. In 2015, together with a circle of young and gifted friends, I founded Purple Bird. It grew into a studio with branches in major cities across Bangladesh and its home in Khulna, and we have since been entrusted with a couple of thousand weddings, each one a story of its own.</p>
-    <p>Purple Bird also grew beyond the camera. The Photography Institute of Purple Bird teaches the craft to new photographers, and Purple Bird Production looks after production work. Together they have created livelihoods for creative people across the country who now practise photography as their profession. At university I founded the Northern University Bangladesh Photography Club (NUBPC), and I have served as Ambassador for Khulna and Joint Secretary of Wedding and Portrait Photographers of Bangladesh (WPPB). My photographs have been featured in newspapers including The Daily Star and the Daily Jugantor, and exhibited in national and international competitions.</p>
-    <p>Today I am the founder of Purple Bird Australia. For the past six years I have been photographing weddings and events across Australia, leading a team of Bangladeshi photographers from Sydney and Wollongong to Adelaide, and documenting celebrations of every scale, from grand modern receptions to the intimate grace of traditional ceremonies.</p>
+    <p>Purple Bird also grew beyond the camera. The Photography Institute of Purple Bird teaches the craft to new photographers, and Purple Bird Production looks after production work. Together they have created livelihoods for creative people across the country who now practise photography as their profession. At university I founded the Northern University Photography Club (NUBPC), and I have served as Ambassador for Khulna and Joint Secretary of Wedding &amp; Portrait Photographers Bangladesh (WPPB). My photographs have been featured in newspapers including The Daily Star, The Independent and the Daily Jugantor, and exhibited in national and international competitions.</p>
+    <div class="apics">
+      <figure><img src="images/talk-1.jpg" alt="S M Imran Hassan presenting his wedding work on a large screen to a full auditorium at the WPPB international conference and expo" loading="lazy"></figure>
+      <figure><img src="images/talk-2.jpg" alt="S M Imran Hassan on the WPPB stage beneath a screen reading CEO, Purple Bird and WPPB Ambassador, Khulna" loading="lazy"></figure>
+    </div>
+    <h3>Purple Bird Australia</h3>
+    <p>In 2021 I carried the Purple Bird name across the ocean and founded Purple Bird Australia. I began the way I had begun at home: a camera, a few first bookings, and the belief that every wedding deserves to be told honestly, patiently and with heart. Word travelled faster than I could have hoped. Couples recommended us to their friends, families came back to us for their next celebration, and in only a few years Purple Bird Australia has grown into a name that couples across the country trust with the most important day of their lives.</p>
+    <p>Today I lead a team of Bangladeshi photographers working from Sydney and Wollongong to Adelaide. We photograph weddings, holud and mehndi nights, engagements, receptions and family celebrations of every scale, from grand modern receptions to the intimate grace of traditional ceremonies. Many of our couples share our roots, and we understand the rituals, the colours and the emotions of a South Asian wedding from the inside. Just as many come from every other culture that makes Australia home, and each of them receives the same care. To see our wedding work, visit <a href="https://www.purplebirdphoto.com.au/" target="_blank" rel="noopener">Purple Bird Australia</a> or follow <a href="https://www.instagram.com/purplebirdphoto.au/" target="_blank" rel="noopener">@purplebirdphoto.au</a> on Instagram.</p>
     <p>The street, however, has never let me go. Whenever time allows, I return to it with my camera, keeping faith with the child who first fell in love with this craft. It taught me to wait patiently for the honest second before it disappears, and that patience is what I bring to every wedding and every portrait I make. Photography is the air I breathe. I cannot imagine a day without it, and through it I hope to keep spreading something good, for as long as I can hold a camera.</p>
     <p>If you are planning a wedding, or have a project in mind that you would like to bring to life, I would be glad to hear from you. Write to me at <a href="mailto:Photographybyimran@gmail.com">Photographybyimran@gmail.com</a>.</p>
-  </div>
-  <div class="awards">
-    <h2>Awards</h2>
-    <p class="aw-intro">Over the years my work has been recognised by universities, photographic societies and professional bodies in Bangladesh and abroad, across street, portrait and wedding photography. A selection:</p>
-    <ul class="aw-list">
-      <li><span class="aw">2nd Prize</span><span class="ev">1st Click and Caption Contest, Save the Children UK</span></li>
-      <li><span class="aw">2nd Prize</span><span class="ev">Photo Exhibition Contest on World Heart Day, Japan Bangladesh Friendship Hospital</span></li>
-      <li><span class="aw">1st Prize, Portrait (Colour)</span><span class="ev">IIUPE 2012, International Inter University Photography Exhibition, organised by NSUPC (North South University Photography Club)</span></li>
-      <li><span class="aw">Special Award, “Furti Chorom Picture Award”</span><span class="ev">IIUPE 2012, International Inter University Photography Exhibition</span></li>
-      <li><span class="aw">Special Appreciation Award of Photography</span><span class="ev">Northern University Bangladesh Trust</span></li>
-      <li><span class="aw">Special Prize</span><span class="ev">Khulna Photographic Society (KPS)</span></li>
-      <li><span class="aw">2nd Prize</span><span class="ev">3rd Intra NUB Photography Exhibition &amp; Contest, organised by NUBPC</span></li>
-      <li><span class="aw">3rd Prize, Colour</span><span class="ev">Capture Your Dreams Season 1, organised by NUBPC</span></li>
-      <li><span class="aw">Honorary Mention</span><span class="ev">Out of the Box 4, organised by TTL</span></li>
-      <li><span class="aw">1st Prize</span><span class="ev">Break the Circle Season 4, Islamic University of Technology Photography Society</span></li>
-      <li><span class="aw">2nd Prize, Life (B&amp;W)</span><span class="ev">IIUPE 2014, International Inter University Photography Exhibition, organised by NSUPC (North South University Photography Club)</span></li>
-      <li><span class="aw">Special Award (BPS CM 3)</span><span class="ev">3rd BPS International Photography Competition &amp; Exhibition 2016, Bangladesh Photographic Society, under the patronage of FIAP and PSA</span></li>
-      <li><span class="aw">Lifetime Award</span><span class="ev">WPPB</span></li>
-      <li><span class="aw">Bronze Award</span><span class="ev">PPAC</span></li>
-      <li><span class="aw">2nd Award, Outdoor Couple</span><span class="ev">ICCE 2017</span></li>
-      <li><span class="aw">2nd Award, Wedding</span><span class="ev">ICCE 2017</span></li>
-      <li><span class="aw">Special Award</span><span class="ev">IGPS National Photography Contest &amp; Exhibition (Image Ghor Photography Society)</span></li>
-      <li><span class="aw">2nd Award</span><span class="ev">IGPS National Photography Contest &amp; Exhibition (Image Ghor Photography Society)</span></li>
-    </ul>
+    <div class="apics">
+      <figure><img src="images/about-coast.jpg" alt="S M Imran Hassan on a clifftop lookout above a curving beach and green hills on the New South Wales coast" loading="lazy"></figure>
+      <figure><img src="images/about-harbour.jpg" alt="S M Imran Hassan with his camera by the railing at Sydney Harbour, the Opera House and Harbour Bridge behind him" loading="lazy"></figure>
+    </div>
   </div>
 </section>
 
@@ -264,18 +327,30 @@ button{font:inherit;color:inherit}
   addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
 
   /* hero: the photograph changes only while a word is hovered or focused */
-  if(hero){var bgs=[].slice.call(hero.querySelectorAll('.bg')),doors=hero.querySelector('.doors'),leaveT;
+  if(hero){var bgs=[].slice.call(hero.querySelectorAll('.bg')),doors=hero.querySelector('.doors'),words=[].slice.call(doors.children);
   function setBg(k){
     var has=bgs.some(function(b){return b.dataset.k===k});if(!has)k='base';
-    bgs.forEach(function(b){b.classList.toggle('on',b.dataset.k===k)});
+    bgs.forEach(function(b){if(b.dataset.k===k&&b.dataset.src){b.src=b.dataset.src;b.removeAttribute('data-src')}b.classList.toggle('on',b.dataset.k===k)});
   }
-  [].slice.call(doors.children).forEach(function(d){
-    function enter(){clearTimeout(leaveT);doors.classList.add('hovering');[].forEach.call(doors.children,function(x){x.classList.toggle('cur',x===d)});setBg(d.dataset.k)}
-    function leave(){leaveT=setTimeout(function(){doors.classList.remove('hovering');[].forEach.call(doors.children,function(x){x.classList.remove('cur')});setBg('base')},120)}
-    d.addEventListener('pointerenter',function(e){if(e.pointerType!=='touch')enter()});
-    d.addEventListener('pointerleave',leave);
-    d.addEventListener('focus',enter);d.addEventListener('blur',leave);
-  });}
+  /* slideshow on every screen: circus, then Travel, Street, Portrait, Wedding */
+  var SLIDE_MS=3500,slideT=null,hovering=false;
+  var order=['base'].concat(words.map(function(d){return d.dataset.k}).filter(function(k){return bgs.some(function(b){return b.dataset.k===k})}));
+  var si=0;
+  function heroShow(k){
+    setBg(k);
+    doors.classList.toggle('hovering',k!=='base');
+    words.forEach(function(x){x.classList.toggle('cur',x.dataset.k===k)});
+  }
+  function tick(){if(hovering||document.visibilityState!=='visible')return;si=(si+1)%order.length;heroShow(order[si])}
+  function start(){if(RM||slideT)return;slideT=setInterval(tick,SLIDE_MS)}
+  function restart(){if(slideT){clearInterval(slideT);slideT=null}start()}
+  /* hovering a word shows its photograph; the words themselves do nothing when clicked */
+  words.forEach(function(d){
+    d.addEventListener('pointerenter',function(e){if(e.pointerType==='touch')return;hovering=true;si=order.indexOf(d.dataset.k);if(si<0)si=0;heroShow(d.dataset.k)});
+    d.addEventListener('pointerleave',function(){hovering=false;restart()});
+  });
+  heroShow('base');start();
+  }
 
   /* each section shows its first 10 photos; "See more" reveals the rest */
   (function(){
@@ -310,7 +385,7 @@ button{font:inherit;color:inherit}
   /* viewer */
   var all=[].slice.call(document.querySelectorAll('#wall .p'));
   var view=document.getElementById('view'),vimg=document.getElementById('vimg'),vt=document.getElementById('vt'),vc=document.getElementById('vc'),list=[],i=0,last;
-  function show(){var b=list[i],im=b.querySelector('img');vimg.style.animation='none';void vimg.offsetWidth;vimg.style.animation='';vimg.src=im.src;vimg.alt=im.alt;vt.textContent=b.dataset.t;vc.textContent=String(i+1).padStart(2,'0')+' / '+String(list.length).padStart(2,'0')}
+  function show(){var b=list[i],im=b.querySelector('img');vimg.style.animation='none';void vimg.offsetWidth;vimg.style.animation='';vimg.src=im.dataset.full||im.currentSrc||im.src;vimg.alt=im.alt;vt.textContent=b.dataset.t;vc.textContent=String(i+1).padStart(2,'0')+' / '+String(list.length).padStart(2,'0')}
   function open(l,k){last=document.activeElement;list=l;i=k;show();view.hidden=false;document.body.style.overflow='hidden';document.getElementById('vx').focus()}
   function close(){view.hidden=true;document.body.style.overflow='';vimg.removeAttribute('src');if(last)last.focus()}
   all.forEach(function(b,k){b.addEventListener('click',function(){open(all,k)})});
@@ -335,5 +410,7 @@ button{font:inherit;color:inherit}
   }
 })();
 </script>
+<script>(function(){function go(){document.querySelectorAll('img.bg[data-src]').forEach(function(i){i.src=i.getAttribute('data-src');i.removeAttribute('data-src')})}if(document.readyState==='complete')setTimeout(go,300);else addEventListener('load',function(){setTimeout(go,300)})})();</script>
+
 </body>
 </html>

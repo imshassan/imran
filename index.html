@@ -2,10 +2,23 @@
 <meta charset="utf-8">
 <title>S M Imran Hassan</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="S M Imran Hassan — wedding, lifestyle and street photographer. Founder of Purple Bird Photography, Sydney &amp; Adelaide.">
+<meta name="description" content="Bangladeshi wedding, lifestyle and street photographer in Australia. Founder of Purple Bird Photography, with more than 15 years of telling stories through light.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S M Imran Hassan">
+<meta property="og:title" content="S M Imran Hassan | Photographer">
+<meta property="og:description" content="Bangladeshi wedding, lifestyle and street photographer in Australia. Founder of Purple Bird Photography, with more than 15 years of telling stories through light.">
+<meta property="og:image" content="images/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="S M Imran Hassan with his camera, leaning on a tree in autumn colours">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="S M Imran Hassan | Photographer">
+<meta name="twitter:description" content="Bangladeshi wedding, lifestyle and street photographer in Australia. Founder of Purple Bird Photography, with more than 15 years of telling stories through light.">
+<meta name="twitter:image" content="images/share.jpg">
+<link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Hanken+Grotesk:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&family=Playfair+Display:wght@700&display=swap">
 <style>
 /* Layout: the quiet photographer's homepage. One full-screen photograph with the four doors (Faces, Places, Street, Weddings) set over it in serif capitals, a short statement, a tight masonry wall of pictures, then Stay Connected. Black and white type; the photographs carry all the colour. Single light look by choice. */
 :root{
@@ -36,11 +49,16 @@ button{font:inherit;color:inherit}
 .head .in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 24px;padding-block:30px;transition:padding .55s var(--ease)}
 .head.small .in{padding-block:14px}
 .name{font-family:var(--serif);font-weight:500;font-size:clamp(20px,2vw,26px);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;line-height:1.1}
-.head .name{font-size:clamp(30px,4.6vw,64px);letter-spacing:.05em;transition:font-size .55s var(--ease),letter-spacing .55s var(--ease);animation:namein 1.2s var(--ease) both}
+.head .name{font-size:clamp(30px,4.6vw,64px);letter-spacing:.05em;transition:font-size .55s var(--ease),letter-spacing .55s var(--ease)}
 .head.small .name{font-size:clamp(20px,2vw,26px);letter-spacing:.04em}
 @keyframes namein{from{opacity:0;letter-spacing:.18em}to{opacity:1}}
+/* name glow: a soft light behind the letters that breathes slowly */
+.head .name{text-shadow:0 0 10px rgba(255,255,255,.55),0 0 26px rgba(255,236,200,.45),0 0 54px rgba(255,214,150,.30);animation:namein 1.2s var(--ease) both,glow 4.5s ease-in-out 1.2s infinite}
+@keyframes glow{0%,100%{text-shadow:0 0 8px rgba(255,255,255,.45),0 0 22px rgba(255,236,200,.35),0 0 46px rgba(255,214,150,.22)}50%{text-shadow:0 0 14px rgba(255,255,255,.8),0 0 34px rgba(255,236,200,.6),0 0 70px rgba(255,214,150,.42)}}
+.head.solid .name{animation:namein 1.2s var(--ease) both,glowdark 4.5s ease-in-out 1.2s infinite}
+@keyframes glowdark{0%,100%{text-shadow:0 0 8px rgba(196,150,70,.28),0 0 22px rgba(196,150,70,.16)}50%{text-shadow:0 0 12px rgba(196,150,70,.5),0 0 30px rgba(196,150,70,.3)}}
 .head nav ul{display:flex;flex-wrap:wrap;gap:4px 22px;list-style:none;margin:0;padding:0}
-.head nav a{font-size:14px;text-decoration:none;opacity:.92;padding:6px 0;display:inline-block;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s var(--ease),opacity .2s}
+.head nav a{font-size:14px;font-weight:600;letter-spacing:.02em;text-decoration:none;opacity:.92;padding:6px 0;display:inline-block;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s var(--ease),opacity .2s}
 .head nav a:hover{opacity:1;background-size:100% 1px}
 
 /* hero */
@@ -55,11 +73,11 @@ button{font:inherit;color:inherit}
 @keyframes breathe{from{transform:scale(1.08)}to{transform:scale(1)}}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 78% 72% at 50% 46%,rgba(0,0,0,0) 38%,rgba(0,0,0,.38) 72%,rgba(0,0,0,.78) 100%),linear-gradient(180deg,rgba(0,0,0,.32) 0%,rgba(0,0,0,.08) 22%,rgba(0,0,0,.08) 60%,rgba(0,0,0,.42) 100%)}
 .doors{position:absolute;inset:0;z-index:2;display:flex;flex-wrap:wrap;align-content:flex-end;justify-content:center;gap:4px clamp(18px,3vw,44px);padding:24px max(20px,env(safe-area-inset-left,0px)) clamp(110px,24vh,240px)}
-.doors a,.doors button{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3vw,44px);letter-spacing:.08em;line-height:1.1;text-transform:uppercase;color:var(--on-photo);text-decoration:none;background:none;border:0;padding:0;cursor:pointer;opacity:0;transform:translateY(16px);animation:door 1.1s var(--ease) forwards;position:relative;text-shadow:0 1px 24px rgba(0,0,0,.25)}
+.doors .dw{cursor:default;font-family:var(--serif);font-weight:500;font-size:clamp(24px,3vw,44px);letter-spacing:.08em;line-height:1.1;text-transform:uppercase;color:var(--on-photo);text-decoration:none;background:none;border:0;padding:0;cursor:pointer;opacity:0;transform:translateY(16px);animation:door 1.1s var(--ease) forwards;position:relative;text-shadow:0 1px 24px rgba(0,0,0,.25)}
 .doors>*:nth-child(1){animation-delay:.3s}.doors>*:nth-child(2){animation-delay:.42s}.doors>*:nth-child(3){animation-delay:.54s}.doors>*:nth-child(4){animation-delay:.66s}
 @keyframes door{to{opacity:1;transform:none}}
-.doors a::after,.doors button::after{content:"";position:absolute;left:4%;right:4%;bottom:.04em;height:1px;background:currentColor;transform:scaleX(0);transition:transform .45s var(--ease)}
-.doors a:hover::after,.doors button:hover::after{transform:scaleX(1)}
+.doors .dw::after{content:"";position:absolute;left:4%;right:4%;bottom:.04em;height:1px;background:currentColor;transform:scaleX(0);transition:transform .45s var(--ease)}
+.doors .dw.cur::after{transform:scaleX(1)}
 .hint{position:absolute;z-index:2;left:50%;bottom:calc(26px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:1px;height:44px;background:rgba(255,255,255,.35);overflow:hidden}
 .hint::after{content:"";position:absolute;left:0;top:0;width:1px;height:100%;background:#fff;animation:drop 2.2s 1.4s ease-in-out infinite;transform:translateY(-100%)}
 @keyframes drop{to{transform:translateY(100%)}}
@@ -87,11 +105,48 @@ button{font:inherit;color:inherit}
 .more{display:flex;justify-content:center;padding-bottom:clamp(64px,8vw,110px);margin-top:calc(-1 * clamp(30px,4vw,60px))}
 .ptitle{padding-top:clamp(150px,15vw,210px)!important}
 .apage{padding-top:clamp(140px,14vw,200px)!important}
+.awpage{padding-top:clamp(140px,14vw,200px)!important;display:grid;justify-items:center;padding-bottom:clamp(64px,8vw,110px)}
+.awpics{width:100%;max-width:1120px;margin-top:clamp(56px,7vw,100px);padding-top:clamp(40px,5vw,64px);border-top:1px solid var(--line);display:grid;gap:clamp(28px,3.6vw,48px)}
+.awp-head{display:grid;justify-items:center;text-align:center;gap:10px}
+.awp-eye{margin:0;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.awpics h3{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(30px,3.4vw,44px);letter-spacing:.06em;text-transform:uppercase;line-height:1.05}
+.awp-sub{margin:0;max-width:min(54ch,100%);color:#555;font-size:15px}
+.awgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(36px,4.4vw,60px) clamp(20px,2.8vw,40px)}
+.awgrid figure{margin:0;display:grid;gap:18px;align-content:start}
+.awimg{overflow:hidden;background:var(--soft);aspect-ratio:3/2;box-shadow:0 1px 2px rgba(0,0,0,.06),0 14px 34px -18px rgba(0,0,0,.35)}
+.awimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.1s var(--ease)}
+.awgrid figure:hover .awimg img{transform:scale(1.035)}
+.awgrid figcaption{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px;align-items:baseline}
+.awgrid .no{grid-row:1/3;font-family:var(--serif);font-size:clamp(30px,2.8vw,38px);line-height:.9;color:#b9b2a6;font-weight:500;padding-right:16px;border-right:1px solid var(--line);align-self:stretch}
+.awgrid figcaption b{font-family:var(--serif);font-weight:600;font-size:clamp(20px,1.8vw,24px);line-height:1.2;color:var(--fg)}
+.awgrid .dt{color:var(--muted);font-size:14px;line-height:1.5}
+@media (max-width:640px){.awgrid{grid-template-columns:1fr}}
+.awpage .awards{margin-top:0}
+.awpage .awards h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.4vw,56px);letter-spacing:.06em;text-transform:uppercase;text-align:center;line-height:1.05}
 .ptitle h1{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.4vw,56px);letter-spacing:.06em;text-transform:uppercase;line-height:1.05}
 .sec{display:flex;flex-direction:column;gap:12px;background:var(--tint);padding:clamp(24px,3.4vw,52px) clamp(14px,2.6vw,40px) clamp(28px,3.6vw,56px)}
 .sec .wall-head{padding-top:0!important}
 .wall{gap:clamp(18px,2.4vw,32px)!important}
+.life{background:radial-gradient(120% 90% at 30% 40%,#f7f3ec 0%,#ece5da 60%,#e3dbce 100%);padding-block:clamp(64px,8vw,120px)}
+.life-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:center}
+.life-pic{margin:0;justify-self:end;width:100%;max-width:460px;box-shadow:0 2px 4px rgba(40,30,20,.08),0 30px 60px -24px rgba(40,30,20,.45),0 60px 120px -60px rgba(40,30,20,.35)}
+.life-pic img{width:100%;height:auto;display:block}
+.life-txt{display:grid;gap:16px;max-width:44ch}
+.life-eye{margin:0;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7a6f60}
+.life-txt h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(32px,3.8vw,52px);letter-spacing:.04em;text-transform:uppercase;line-height:1.05;color:#1a1612}
+.life-q{margin:6px 0 0;padding-left:22px;border-left:2px solid #b9ab95;display:grid;gap:12px}
+.life-q p{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(22px,2.1vw,30px);line-height:1.35;color:#2c261f}
+.life-q cite{font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#7a6f60}
+@media (max-width:760px){.life-q{padding-left:0;border-left:0;padding-top:16px;border-top:2px solid #b9ab95}}
+@media (max-width:760px){.life-in{grid-template-columns:1fr;justify-items:center;text-align:center}.life-pic{justify-self:center;max-width:380px}.life-txt{justify-items:center}}
 .s-bd{--tint:#f6f1e9}
+.intro{gap:0!important}
+.intro p{margin:0}
+.intro .who{max-width:none!important;white-space:nowrap;font-family:"Playfair Display",Georgia,serif!important;font-style:normal;font-weight:700;font-size:clamp(22px,2.3vw,32px)!important;letter-spacing:0;line-height:1.3;color:#111;margin-bottom:clamp(12px,1.4vw,18px)}
+@media (max-width:760px){.intro .who{white-space:normal;max-width:min(36ch,100%)!important}}
+.intro .banner{width:100%;max-width:1280px;margin:clamp(14px,2.4vw,32px) 0}
+.banner{margin:0;background:#000;overflow:hidden}
+.banner img{width:100%;height:auto;display:block}
 .s-in{--tint:#edf2f5}
 .s-wd{--tint:#f7eeee}
 .seemore{display:flex;justify-content:center;padding-top:clamp(10px,1.6vw,18px)}
@@ -126,6 +181,26 @@ button{font:inherit;color:inherit}
 .about .txt{max-width:min(78ch,100%);display:grid;gap:18px;text-align:left}
 .about h2,.connect h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,2.8vw,38px);letter-spacing:.04em;text-transform:uppercase;line-height:1.1;margin:0;text-align:center}
 .about .txt p{margin:0;color:#2b2b2b;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+.apics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);margin-top:clamp(10px,2vw,24px)}
+.apics figure{margin:0;overflow:hidden;background:var(--soft)}
+.about .apics figure{max-width:none}
+.about .apics img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+@media (max-width:600px){.apics{grid-template-columns:1fr}}
+.press{width:100%;max-width:1180px;margin-inline:auto;box-sizing:border-box;display:grid;gap:14px;justify-items:center;margin-top:clamp(20px,3vw,40px);padding-top:clamp(28px,3.4vw,44px);border-top:1px solid var(--line)}
+.press h3{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.3vw,32px);letter-spacing:.04em;text-transform:uppercase;line-height:1.15;text-align:center}
+.press-sub{margin:0 0 10px;color:var(--muted);text-align:center;font-size:15px}
+.press-row{display:flex;gap:clamp(10px,1.4vw,18px);width:100%;align-items:flex-start}
+.press-row figure{margin:0;flex:var(--r) 1 0;min-width:0;display:grid;gap:8px}
+.press-row a{display:block;background:var(--soft);box-shadow:0 1px 0 var(--line),0 10px 26px rgba(0,0,0,.08);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.press-row a:hover{transform:translateY(-4px);box-shadow:0 1px 0 var(--line),0 16px 34px rgba(0,0,0,.14)}
+.press-row figure{max-width:none;overflow:visible;background:none;width:auto}
+.press-row img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;display:block}
+.press-row figcaption{display:grid;gap:2px;font-size:13px;line-height:1.4;text-align:left}
+.press-row figcaption b{font-weight:500;color:var(--fg)}
+.press-row figcaption span{color:var(--muted)}
+@media (max-width:760px){.press-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.press-row figure:first-child{grid-column:1/-1}}
+.about .txt h3{margin:clamp(14px,2vw,26px) 0 0;padding-top:clamp(22px,3vw,34px);border-top:1px solid var(--line);font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.3vw,32px);letter-spacing:.04em;text-transform:uppercase;line-height:1.15;text-align:center}
+.about .txt a{text-underline-offset:3px}
 .about .txt p.lead{font-family:var(--serif);font-weight:500;font-size:clamp(21px,1.9vw,25px);line-height:1.4;color:var(--fg);text-align:center}
 
 
@@ -177,8 +252,10 @@ button{font:inherit;color:inherit}
     <nav aria-label="Main">
       <ul>
         <li><a href="#top" aria-current="page">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="about.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="publications.html">Publications</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -187,47 +264,58 @@ button{font:inherit;color:inherit}
 
 <section class="hero" id="top" aria-label="Introduction">
   <img class="bg base on" data-k="base" src="images/hero.jpg" alt="A circus performer in oversized green glasses leans by a rope ladder, the ring glowing red behind him" fetchpriority="high">
-  <img class="bg" data-k="faces" src="images/portrait-hero.jpg" alt="">
-  <img class="bg" data-k="places" src="images/travel-hero.jpg" alt="">
-  <img class="bg" data-k="street" src="images/street-hero2.jpg" alt="">
-  <img class="bg" data-k="weddings" src="images/wedding-hero.jpg" alt="">
-  <nav class="doors" aria-label="Galleries">
-    <button type="button" data-open="faces" data-k="faces">Portrait</button>
-    <button type="button" data-open="places" data-k="places">Travel</button>
-    <button type="button" data-open="street" data-k="street">Street</button>
-    <a href="https://www.purplebirdphoto.com.au/" target="_blank" rel="noopener" data-k="weddings">Wedding</a>
-  </nav>
+  <img class="bg" data-k="faces" data-src="images/portrait-hero.jpg" alt="" decoding="async">
+  <img class="bg" data-k="places" data-src="images/travel-hero.jpg" alt="" decoding="async">
+  <img class="bg" data-k="street" data-src="images/street-hero2.jpg" alt="" decoding="async">
+  <img class="bg" data-k="weddings" data-src="images/wedding-hero.jpg" alt="" decoding="async">
+  <div class="doors">
+    <span class="dw" data-k="places">Travel</span>
+    <span class="dw" data-k="street">Street</span>
+    <span class="dw" data-k="faces">Portrait</span>
+    <span class="dw" data-k="weddings">Wedding</span>
+  </div>
   <span class="hint" aria-hidden="true"></span>
 </section>
 
 <div class="intro gut" id="work">
-  <p class="who">A Bangladeshi photographer in Australia, telling stories of weddings, everyday life and the street.</p>
+  <p class="who">Telling stories of weddings, everyday life and the street.</p>
   <p>For over 15 years I have photographed people as they are: at weddings, on the street and on the road. Every frame is built on a simple promise, to capture life exactly as it feels.</p>
 </div>
 
 <div class="wall gut" id="wall">
 <section class="sec s-bd">
   <div class="wall-head"><h3>Bangladesh</h3><p>Streets, rivers, festivals and faces from home</p></div>
-  <div class="row"><button class="p" style="--r:1.5000" type="button" data-t="Happy Face · Portrait" data-c="faces street" aria-label="Open Happy Face"><img src="images/w2.jpg" alt="A smiling boy peeks out from a pile of puffed rice packets" loading="lazy"></button><button class="p" style="--r:1.5000" type="button" data-t="Golden Fields · Bangladesh" data-c="places" aria-label="Open Golden Fields"><img src="images/z2.jpg" alt="A hazy orange sun sets over flooded rice fields and palm trees" loading="lazy"></button></div>
-  <div class="feat" style="--g:2.0000"><button class="p big" style="--r:1.5000" type="button" data-t="Respect · Street" data-c="street" aria-label="Open Respect"><img src="images/x5.jpg" alt="A woman bows to the ground before an elephant&#x27;s feet as children watch" loading="lazy"></button><div class="fside col"><button class="p" style="--r:1.5000" type="button" data-t="Fire Breather · Street" data-c="street" aria-label="Open Fire Breather"><img src="images/y13.jpg" alt="A man breathes a ball of fire from a rooftop crowded with people at dusk" loading="lazy"></button><button class="p" style="--r:1.5000" type="button" data-t="Powerful Childhood · Street" data-c="faces street" aria-label="Open Powerful Childhood"><img src="images/x1.jpg" alt="A boy laughs as he leans out of the window of a moving train" loading="lazy"></button></div></div>
-  <div class="feat rev" style="--g:0.4444"><button class="p big" style="--r:0.6667" type="button" data-t="Big Top · Circus" data-c="street" aria-label="Open Big Top"><img src="images/y7.jpg" alt="A performer rides a bicycle on a pole inside a striped, multicoloured circus tent" loading="lazy"></button><div class="fside grid"><div class="row"><button class="p" style="--r:1.5000" type="button" data-t="Another Big World · Street" data-c="faces street" aria-label="Open Another Big World"><img src="images/w7.jpg" alt="A circus performer in oversized green glasses leans by a rope ladder, the ring glowing red behind him" loading="lazy"></button><button class="p" style="--r:1.5000" type="button" data-t="Survival · Street" data-c="street" aria-label="Open Survival"><img src="images/w9.jpg" alt="Two bulls lock horns in front of a large crowd" loading="lazy"></button></div><div class="row"><button class="p" style="--r:1.5000" type="button" data-t="Colour of Nature · Street" data-c="street" aria-label="Open Colour of Nature"><img src="images/w8.jpg" alt="A boy stands in a bare tree, silhouetted against a stormy sky" loading="lazy"></button><button class="p" style="--r:1.5000" type="button" data-t="Dignity · Street" data-c="street faces" aria-label="Open Dignity"><img src="images/x3.jpg" alt="A woman stands before an elephant and its rider as a crowd of villagers watches" loading="lazy"></button></div></div></div>
+  <div class="row"><button class="p" style="--r:1.4995" type="button" data-t="Happy Face · Portrait" data-c="faces street" aria-label="Open Happy Face"><img src="images/sm/w2.jpg" srcset="images/sm/w2.jpg 900w, images/w2.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/w2.jpg" alt="A smiling boy peeks out from a pile of puffed rice packets" loading="lazy" decoding="async"></button><button class="p" style="--r:1.4995" type="button" data-t="Golden Fields · Bangladesh" data-c="places" aria-label="Open Golden Fields"><img src="images/sm/z2.jpg" srcset="images/sm/z2.jpg 900w, images/z2.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/z2.jpg" alt="A hazy orange sun sets over flooded rice fields and palm trees" loading="lazy" decoding="async"></button></div>
+  <div class="feat" style="--g:2.0000"><button class="p big" style="--r:1.4995" type="button" data-t="Respect · Street" data-c="street" aria-label="Open Respect"><img src="images/sm/x5.jpg" srcset="images/sm/x5.jpg 900w, images/x5.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/x5.jpg" alt="A woman bows to the ground before an elephant&#x27;s feet as children watch" loading="lazy" decoding="async"></button><div class="fside col"><button class="p" style="--r:1.4995" type="button" data-t="Fire Breather · Street" data-c="street" aria-label="Open Fire Breather"><img src="images/sm/y13.jpg" srcset="images/sm/y13.jpg 900w, images/y13.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/y13.jpg" alt="A man breathes a ball of fire from a rooftop crowded with people at dusk" loading="lazy" decoding="async"></button><button class="p" style="--r:1.4995" type="button" data-t="Powerful Childhood · Street" data-c="faces street" aria-label="Open Powerful Childhood"><img src="images/sm/x1.jpg" srcset="images/sm/x1.jpg 900w, images/x1.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/x1.jpg" alt="A boy laughs as he leans out of the window of a moving train" loading="lazy" decoding="async"></button></div></div>
+  <div class="feat rev" style="--g:0.4447"><button class="p big" style="--r:0.6669" type="button" data-t="Big Top · Circus" data-c="street" aria-label="Open Big Top"><img src="images/sm/y7.jpg" srcset="images/sm/y7.jpg 900w, images/y7.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/y7.jpg" alt="A performer rides a bicycle on a pole inside a striped, multicoloured circus tent" loading="lazy" decoding="async"></button><div class="fside grid"><div class="row"><button class="p" style="--r:1.4995" type="button" data-t="Another Big World · Street" data-c="faces street" aria-label="Open Another Big World"><img src="images/sm/w7.jpg" srcset="images/sm/w7.jpg 900w, images/w7.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/w7.jpg" alt="A circus performer in oversized green glasses leans by a rope ladder, the ring glowing red behind him" loading="lazy" decoding="async"></button><button class="p" style="--r:1.4995" type="button" data-t="Survival · Street" data-c="street" aria-label="Open Survival"><img src="images/sm/w9.jpg" srcset="images/sm/w9.jpg 900w, images/w9.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/w9.jpg" alt="Two bulls lock horns in front of a large crowd" loading="lazy" decoding="async"></button></div><div class="row"><button class="p" style="--r:1.4995" type="button" data-t="Colour of Nature · Street" data-c="street" aria-label="Open Colour of Nature"><img src="images/sm/w8.jpg" srcset="images/sm/w8.jpg 900w, images/w8.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/w8.jpg" alt="A boy stands in a bare tree, silhouetted against a stormy sky" loading="lazy" decoding="async"></button><button class="p" style="--r:1.4995" type="button" data-t="Dignity · Street" data-c="street faces" aria-label="Open Dignity"><img src="images/sm/x3.jpg" srcset="images/sm/x3.jpg 900w, images/x3.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/x3.jpg" alt="A woman stands before an elephant and its rider as a crowd of villagers watches" loading="lazy" decoding="async"></button></div></div></div>
 </section>
 <section class="sec s-in">
   <div class="wall-head"><h3>International</h3><p>Kashmir and Ladakh, India, Europe and Australia</p></div>
-  <div class="row"><button class="p" style="--r:2.3256" type="button" data-t="Storm over the Lake · Ladakh" data-c="places" aria-label="Open Storm over the Lake"><img src="images/t5.jpg" alt="Storm clouds hang over a wind-whipped blue lake between bare mountains" loading="lazy"></button><button class="p" style="--r:1.5000" type="button" data-t="Gulls at the Quay · Sydney" data-c="street" aria-label="Open Gulls at the Quay"><img src="images/z5.jpg" alt="Gulls and a pigeon in flight cast long shadows on a herringbone-brick plaza at Circular Quay" loading="lazy"></button></div>
-  <div class="feat" style="--g:2.0000"><button class="p big" style="--r:1.5000" type="button" data-t="Shikaras · Kashmir" data-c="places" aria-label="Open Shikaras"><img src="images/t1.jpg" alt="Painted shikara boats glide across a still lake, reflected in the water, with mountains beyond" loading="lazy"></button><div class="fside col"><button class="p" style="--r:1.5000" type="button" data-t="Before Dark · Kashmir" data-c="places" aria-label="Open Before Dark"><img src="images/t3.jpg" alt="Dark rippling water in the foreground and a long mountain range under a pale evening sky" loading="lazy"></button><button class="p" style="--r:1.5000" type="button" data-t="Gallery Window · Amsterdam" data-c="street" aria-label="Open Gallery Window"><img src="images/e18.jpg" alt="A framed portrait on an easel in a gallery window, with visitors and the street reflected in the glass" loading="lazy"></button></div></div>
-  <div class="feat rev" style="--g:2.0000"><button class="p big" style="--r:1.5000" type="button" data-t="Monastery · Ladakh" data-c="places" aria-label="Open Monastery"><img src="images/t4.jpg" alt="A white monastery clings to a rocky ridge below vast brown mountains and a blue sky" loading="lazy"></button><div class="fside col"><button class="p" style="--r:1.5000" type="button" data-t="Senate Square · Helsinki" data-c="places street" aria-label="Open Senate Square"><img src="images/e14.jpg" alt="The white cathedral above its steps, a yellow van and a passer-by in a blue hat" loading="lazy"></button><button class="p" style="--r:1.5000" type="button" data-t="Star Trails · Ladakh" data-c="places" aria-label="Open Star Trails"><img src="images/t7.jpg" alt="Star trails circle the night sky above a row of lit tents beside a mountain lake" loading="lazy"></button></div></div>
+  <div class="row"><button class="p" style="--r:2.3256" type="button" data-t="Storm over the Lake · Ladakh" data-c="places" aria-label="Open Storm over the Lake"><img src="images/sm/t5.jpg" srcset="images/sm/t5.jpg 900w, images/t5.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/t5.jpg" alt="Storm clouds hang over a wind-whipped blue lake between bare mountains" loading="lazy" decoding="async"></button><button class="p" style="--r:1.4995" type="button" data-t="The March · Sydney" data-c="street faces" aria-label="Open The March"><img src="images/sm/z8.jpg" srcset="images/sm/z8.jpg 900w, images/z8.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/z8.jpg" alt="A masked mother carries her child through a crowded street protest march" loading="lazy" decoding="async"></button><button class="p" style="--r:1.4995" type="button" data-t="Gulls at the Quay · Sydney" data-c="street" aria-label="Open Gulls at the Quay"><img src="images/sm/z5.jpg" srcset="images/sm/z5.jpg 900w, images/z5.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/z5.jpg" alt="Gulls and a pigeon in flight cast long shadows on a herringbone-brick plaza at Circular Quay" loading="lazy" decoding="async"></button></div>
+  <div class="feat" style="--g:2.0000"><button class="p big" style="--r:1.4995" type="button" data-t="Shikaras · Kashmir" data-c="places" aria-label="Open Shikaras"><img src="images/sm/t1.jpg" srcset="images/sm/t1.jpg 900w, images/t1.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/t1.jpg" alt="Painted shikara boats glide across a still lake, reflected in the water, with mountains beyond" loading="lazy" decoding="async"></button><div class="fside col"><button class="p" style="--r:1.4995" type="button" data-t="Senate Square · Helsinki" data-c="places street" aria-label="Open Senate Square"><img src="images/sm/e14.jpg" srcset="images/sm/e14.jpg 900w, images/e14.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/e14.jpg" alt="The white cathedral above its steps, a yellow van and a passer-by in a blue hat" loading="lazy" decoding="async"></button><button class="p" style="--r:1.4995" type="button" data-t="Gallery Window · Amsterdam" data-c="street" aria-label="Open Gallery Window"><img src="images/sm/e18.jpg" srcset="images/sm/e18.jpg 900w, images/e18.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/e18.jpg" alt="A framed portrait on an easel in a gallery window, with visitors and the street reflected in the glass" loading="lazy" decoding="async"></button></div></div>
+  <div class="feat rev" style="--g:2.0000"><button class="p big" style="--r:1.4995" type="button" data-t="Monastery · Ladakh" data-c="places" aria-label="Open Monastery"><img src="images/sm/t4.jpg" srcset="images/sm/t4.jpg 900w, images/t4.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/t4.jpg" alt="A white monastery clings to a rocky ridge below vast brown mountains and a blue sky" loading="lazy" decoding="async"></button><div class="fside col"><button class="p" style="--r:1.4995" type="button" data-t="Before Dark · Kashmir" data-c="places" aria-label="Open Before Dark"><img src="images/sm/t3.jpg" srcset="images/sm/t3.jpg 900w, images/t3.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/t3.jpg" alt="Dark rippling water in the foreground and a long mountain range under a pale evening sky" loading="lazy" decoding="async"></button><button class="p" style="--r:1.4995" type="button" data-t="Star Trails · Ladakh" data-c="places" aria-label="Open Star Trails"><img src="images/sm/t7.jpg" srcset="images/sm/t7.jpg 900w, images/t7.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/t7.jpg" alt="Star trails circle the night sky above a row of lit tents beside a mountain lake" loading="lazy" decoding="async"></button></div></div>
 </section>
 <section class="sec s-wd">
   <div class="wall-head"><h3>Weddings</h3><p>Love stories across Australia, photographed with Purple Bird Australia</p></div>
-  <div class="row"><button class="p" style="--r:1.5000" type="button" data-t="Pulpit Rock · Wedding" data-c="weddings" aria-label="Open Pulpit Rock"><img src="images/wd1.jpg" alt="A couple holding hands on mossy coastal rocks beneath a towering sea stack, her green veil streaming in the wind" loading="lazy"></button><button class="p" style="--r:0.6667" type="button" data-t="Footprints · Wedding" data-c="weddings" aria-label="Open Footprints"><img src="images/wd2.jpg" alt="A couple in traditional wedding clothes walk hand in hand along the shore, their footprints trailing behind them" loading="lazy"></button><button class="p" style="--r:0.6672" type="button" data-t="Winter Blue · Wedding" data-c="weddings" aria-label="Open Winter Blue"><img src="images/wd5.jpg" alt="A woman in a flowing blue gown stands in the snow beneath bare trees at dusk" loading="lazy"></button></div>
-  <div class="row"><button class="p" style="--r:1.3343" type="button" data-t="The Jetty · Wedding" data-c="weddings" aria-label="Open The Jetty"><img src="images/wd4.jpg" alt="Seen from above, a couple in blue lie on a long white jetty over turquoise water and reef" loading="lazy"></button><button class="p" style="--r:1.5000" type="button" data-t="Morning Walk · Wedding" data-c="weddings" aria-label="Open Morning Walk"><img src="images/wd3.jpg" alt="A bride and groom walk along a misty beach lined with tall pine trees" loading="lazy"></button><button class="p" style="--r:1.4988" type="button" data-t="Blue Hour · Wedding" data-c="weddings" aria-label="Open Blue Hour"><img src="images/wd6.jpg" alt="A couple in blue stand beside a sculpted, lit sandstone cliff under a deep blue evening sky" loading="lazy"></button></div>
+  <div class="row"><button class="p" style="--r:1.4995" type="button" data-t="Pulpit Rock · Wedding" data-c="weddings" aria-label="Open Pulpit Rock"><img src="images/sm/wd1.jpg" srcset="images/sm/wd1.jpg 900w, images/wd1.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/wd1.jpg" alt="A couple holding hands on mossy coastal rocks beneath a towering sea stack, her green veil streaming in the wind" loading="lazy" decoding="async"></button><button class="p" style="--r:0.6669" type="button" data-t="Footprints · Wedding" data-c="weddings" aria-label="Open Footprints"><img src="images/sm/wd2.jpg" srcset="images/sm/wd2.jpg 900w, images/wd2.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/wd2.jpg" alt="A couple in traditional wedding clothes walk hand in hand along the shore, their footprints trailing behind them" loading="lazy" decoding="async"></button><button class="p" style="--r:0.6675" type="button" data-t="Winter Blue · Wedding" data-c="weddings" aria-label="Open Winter Blue"><img src="images/sm/wd5.jpg" srcset="images/sm/wd5.jpg 900w, images/wd5.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/wd5.jpg" alt="A woman in a flowing blue gown stands in the snow beneath bare trees at dusk" loading="lazy" decoding="async"></button></div>
+  <div class="row"><button class="p" style="--r:1.3344" type="button" data-t="The Jetty · Wedding" data-c="weddings" aria-label="Open The Jetty"><img src="images/sm/wd4.jpg" srcset="images/sm/wd4.jpg 900w, images/wd4.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/wd4.jpg" alt="Seen from above, a couple in blue lie on a long white jetty over turquoise water and reef" loading="lazy" decoding="async"></button><button class="p" style="--r:1.4995" type="button" data-t="Morning Walk · Wedding" data-c="weddings" aria-label="Open Morning Walk"><img src="images/sm/wd3.jpg" srcset="images/sm/wd3.jpg 900w, images/wd3.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/wd3.jpg" alt="A bride and groom walk along a misty beach lined with tall pine trees" loading="lazy" decoding="async"></button></div>
+  <div class="row"><button class="p" style="--r:1.4995" type="button" data-t="Harbour Wind · Wedding" data-c="weddings" aria-label="Open Harbour Wind"><img src="images/sm/wd7.jpg" srcset="images/sm/wd7.jpg 900w, images/wd7.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/wd7.jpg" alt="A couple embrace on the harbour rocks as wind lifts her blue skirt, the Sydney Opera House and Harbour Bridge behind them" loading="lazy" decoding="async"></button><button class="p" style="--r:1.4981" type="button" data-t="Blue Hour · Wedding" data-c="weddings" aria-label="Open Blue Hour"><img src="images/sm/wd6.jpg" srcset="images/sm/wd6.jpg 900w, images/wd6.jpg 1600w" sizes="(max-width:700px) 100vw, 50vw" data-full="images/wd6.jpg" alt="A couple in blue stand beside a sculpted, lit sandstone cliff under a deep blue evening sky" loading="lazy" decoding="async"></button></div>
   <div class="wall-cta"><a class="pill" href="https://www.purplebirdphoto.com.au/" target="_blank" rel="noopener">See more weddings at Purple Bird Australia</a><a class="pill ghost" href="https://www.instagram.com/purplebirdphoto.au/" target="_blank" rel="noopener">Wedding portfolio on Instagram</a></div>
 </section>
 </div>
 <!--MORE--><div class="more gut"><a class="pill" href="portfolio.html">View full portfolio</a></div><!--/MORE-->
 
 
+<section class="life gut" aria-label="Off the clock">
+  <div class="life-in">
+    <figure class="life-pic"><img src="images/home-cats.jpg" alt="S M Imran Hassan at home, hugging a white Persian cat while a grey kitten peeks over his shoulder" width="1158" height="1600" loading="lazy"></figure>
+    <div class="life-txt">
+      <p class="life-eye">Off the clock</p>
+      <h2>Behind the lens</h2>
+      <blockquote class="life-q"><p>“To photograph is to put one’s head, one’s eye and one’s heart on the same axis.”</p><cite>Henri Cartier-Bresson</cite></blockquote>
+    </div>
+  </div>
+</section>
 <section class="connect gut" id="contact">
   <h2>Stay Connected</h2>
   <p class="mail"><a href="mailto:Photographybyimran@gmail.com">Photographybyimran@gmail.com</a></p>
@@ -260,18 +348,30 @@ button{font:inherit;color:inherit}
   addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
 
   /* hero: the photograph changes only while a word is hovered or focused */
-  if(hero){var bgs=[].slice.call(hero.querySelectorAll('.bg')),doors=hero.querySelector('.doors'),leaveT;
+  if(hero){var bgs=[].slice.call(hero.querySelectorAll('.bg')),doors=hero.querySelector('.doors'),words=[].slice.call(doors.children);
   function setBg(k){
     var has=bgs.some(function(b){return b.dataset.k===k});if(!has)k='base';
-    bgs.forEach(function(b){b.classList.toggle('on',b.dataset.k===k)});
+    bgs.forEach(function(b){if(b.dataset.k===k&&b.dataset.src){b.src=b.dataset.src;b.removeAttribute('data-src')}b.classList.toggle('on',b.dataset.k===k)});
   }
-  [].slice.call(doors.children).forEach(function(d){
-    function enter(){clearTimeout(leaveT);doors.classList.add('hovering');[].forEach.call(doors.children,function(x){x.classList.toggle('cur',x===d)});setBg(d.dataset.k)}
-    function leave(){leaveT=setTimeout(function(){doors.classList.remove('hovering');[].forEach.call(doors.children,function(x){x.classList.remove('cur')});setBg('base')},120)}
-    d.addEventListener('pointerenter',function(e){if(e.pointerType!=='touch')enter()});
-    d.addEventListener('pointerleave',leave);
-    d.addEventListener('focus',enter);d.addEventListener('blur',leave);
-  });}
+  /* slideshow on every screen: circus, then Travel, Street, Portrait, Wedding */
+  var SLIDE_MS=3500,slideT=null,hovering=false;
+  var order=['base'].concat(words.map(function(d){return d.dataset.k}).filter(function(k){return bgs.some(function(b){return b.dataset.k===k})}));
+  var si=0;
+  function heroShow(k){
+    setBg(k);
+    doors.classList.toggle('hovering',k!=='base');
+    words.forEach(function(x){x.classList.toggle('cur',x.dataset.k===k)});
+  }
+  function tick(){if(hovering||document.visibilityState!=='visible')return;si=(si+1)%order.length;heroShow(order[si])}
+  function start(){if(RM||slideT)return;slideT=setInterval(tick,SLIDE_MS)}
+  function restart(){if(slideT){clearInterval(slideT);slideT=null}start()}
+  /* hovering a word shows its photograph; the words themselves do nothing when clicked */
+  words.forEach(function(d){
+    d.addEventListener('pointerenter',function(e){if(e.pointerType==='touch')return;hovering=true;si=order.indexOf(d.dataset.k);if(si<0)si=0;heroShow(d.dataset.k)});
+    d.addEventListener('pointerleave',function(){hovering=false;restart()});
+  });
+  heroShow('base');start();
+  }
 
   /* each section shows its first 10 photos; "See more" reveals the rest */
   (function(){
@@ -306,7 +406,7 @@ button{font:inherit;color:inherit}
   /* viewer */
   var all=[].slice.call(document.querySelectorAll('#wall .p'));
   var view=document.getElementById('view'),vimg=document.getElementById('vimg'),vt=document.getElementById('vt'),vc=document.getElementById('vc'),list=[],i=0,last;
-  function show(){var b=list[i],im=b.querySelector('img');vimg.style.animation='none';void vimg.offsetWidth;vimg.style.animation='';vimg.src=im.src;vimg.alt=im.alt;vt.textContent=b.dataset.t;vc.textContent=String(i+1).padStart(2,'0')+' / '+String(list.length).padStart(2,'0')}
+  function show(){var b=list[i],im=b.querySelector('img');vimg.style.animation='none';void vimg.offsetWidth;vimg.style.animation='';vimg.src=im.dataset.full||im.currentSrc||im.src;vimg.alt=im.alt;vt.textContent=b.dataset.t;vc.textContent=String(i+1).padStart(2,'0')+' / '+String(list.length).padStart(2,'0')}
   function open(l,k){last=document.activeElement;list=l;i=k;show();view.hidden=false;document.body.style.overflow='hidden';document.getElementById('vx').focus()}
   function close(){view.hidden=true;document.body.style.overflow='';vimg.removeAttribute('src');if(last)last.focus()}
   all.forEach(function(b,k){b.addEventListener('click',function(){open(all,k)})});
@@ -331,5 +431,6 @@ button{font:inherit;color:inherit}
   }
 })();
 </script>
+<script>(function(){function go(){document.querySelectorAll('img.bg[data-src]').forEach(function(i){i.src=i.getAttribute('data-src');i.removeAttribute('data-src')})}if(document.readyState==='complete')setTimeout(go,300);else addEventListener('load',function(){setTimeout(go,300)})})();</script>
 
 </body></html>
